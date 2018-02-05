@@ -13,15 +13,28 @@ public class ArrayMethods2 {
 		{
 			if(list[x] <= y)
 			{
-				
+				lowerArrange(list[x], y);
 			}
 			else if(list[x] > y)
 			{
-				
+				upperArrange(list[x], y);
 			}
 			return ;
 		}
 	}
 	
+	public static void lowerArrange(int x, int y)
+	{
+		
+	}
 	
+	public static void upperArrange(int x, int y)
+	{
+		
+	}
+	
+	public static void mergeSort(String x)
+	{
+		
+	}
 }
