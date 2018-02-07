@@ -21,11 +21,11 @@ public class ArrayMethods2 {
 		{
 			if(list[x] <= y)
 			{
-				lowerArrange(list[x], y);
+				lowerArrange(list, y, list[x]);
 			}
 			else if(list[x] > y)
 			{
-				upperArrange(list[x], y);
+				upperArrange(list, y, list[x]);
 			}
 			
 			for(int i = 0; i < list.length - 1; i++)
@@ -38,18 +38,18 @@ public class ArrayMethods2 {
 		}
 	}
 	
-	public static void lowerArrange(int[] list, int x, int y)
+	public static void lowerArrange(int[] list, int index1, int index2)
 	{
-		int i = list[x];
-		list[x] = list[y];
-		list[y] = i;
+		int i = list[index1];
+		list[index1] = list[index2];
+		list[index2] = i;
 	}
 	
-	public static void upperArrange(int[] list, int x, int y)
+	public static void upperArrange(int[] list, int index1, int index2)
 	{
-		int i = list[x];
-		list[x] = list[y];
-		list[y] = i;
+		int i = list[index1];
+		list[index1] = list[index2];
+		list[index2] = i;
 	}
 	
 	public static void mergeSort(String x, String y)
