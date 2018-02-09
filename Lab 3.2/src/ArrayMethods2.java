@@ -46,11 +46,17 @@ public class ArrayMethods2
 		{
 			if(list[x] <= y)
 			{
-				swap(list, x, y);
+				for (x++; list[x] < y; x++);
+				{
+					swap(list, x, y);
+				}
 			}
 			else if(list[x] > y)
 			{
-				swap(list, y, x);
+				for (y--; list[y] > y; y--);
+				{
+					swap(list, y, x);
+				}
 			}
 			
 			for(int i = 0; i < list.length - 1; i++)
