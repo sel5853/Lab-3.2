@@ -22,7 +22,7 @@ public class ArrayMethods2
 				x++;
 			}
 			
-			else if(list1[x].compareTo(list2[y]) == -1)
+			else if(list1[x].compareTo(list2[y]) == 1)
 			{
 				list1[x]= list3[z];
 				x++;
@@ -42,29 +42,29 @@ public class ArrayMethods2
 	{
 		int y = list[0];
 		int z = 0;
+		int j = list.length - 1;
+		int a = 0;
 		for(int x = 0; x < list.length - 1; x++)
 		{
 			if(list[x] <= y)
 			{
-				for (x++; list[x] < y; x++);
+				a = list[x];
+				for(int b = x; b > 0; b--)
 				{
-					swap(list, x, y);
+					swap(list,  , );
 				}
 			}
-			else if(list[x] > y)
+			else
 			{
-				for (x++; list[x] > y; x--);
-				{
-					swap(list, x, y);
-				}
+				a = list[x];
 			}
-			
-			for(int i = 0; i < list.length - 1; i++)
+		}
+		
+		for(int i = 0; i < list.length - 1; i++)
+		{
+			if(list[i] == y)
 			{
-				if(list[i] == y)
-				{
-					z = i;
-				}
+				z = i;
 			}
 		}
 		return z;
@@ -90,7 +90,7 @@ public class ArrayMethods2
 		System.out.println("Test2 took: " + time + " nanoseconds");
 		System.out.println("Final Pivot Position: " + pivotFinalPos);
 		System.out.println(list);
-	}	
+	}
 	
 	public static void swap(int list[], int index1, int index2)
 	{
