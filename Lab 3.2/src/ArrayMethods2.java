@@ -53,9 +53,9 @@ public class ArrayMethods2
 			}
 			else if(list[x] > y)
 			{
-				for (y--; list[y] > y; y--);
+				for (x++; list[x] > y; x--);
 				{
-					swap(list, y, x);
+					swap(list, x, y);
 				}
 			}
 			
@@ -63,7 +63,7 @@ public class ArrayMethods2
 			{
 				if(list[i] == y)
 				{
-					i = z;
+					z = i;
 				}
 			}
 		}
