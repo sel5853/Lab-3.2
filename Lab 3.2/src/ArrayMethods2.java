@@ -4,28 +4,34 @@ public class ArrayMethods2
 {
 	public static String[] merge(String[] list1, String[] list2)
 	{
-		int x, y ,z = 0;
+		int x = 0;
+		int y = 0;
+		int z = 0;
 		String[] list3 = new String[list1.length + list2.length];
 		while(z < list1.length + list2.length)
 		{
-			if(list1[x] <= list2[y])
+			if(x == list1.length)
 			{
-				x++;
-			}
-			
-			if(list1[x] > list2[y])
-			{
+				list2[y]= list3[z];
 				y++;
 			}
 			
-			if()
+			else if(y == list2.length)
 			{
-				
+				list1[x]= list3[z];
+				x++;
 			}
 			
-			if()
+			else if(list1[x].compareTo(list2[y]) == -1)
 			{
-				
+				list1[x]= list3[z];
+				x++;
+			}
+			
+			else if((list1[x].compareTo(list2[y])) == 1 || (list1[x].compareTo(list2[y]) == 0))
+			{
+				list2[y]= list3[z];
+				y++;
 			}
 			z++;
 		}
@@ -40,11 +46,11 @@ public class ArrayMethods2
 		{
 			if(list[x] <= y)
 			{
-				
+				swap(list, x, y);
 			}
 			else if(list[x] > y)
 			{
-				
+				swap(list, y, x);
 			}
 			
 			for(int i = 0; i < list.length - 1; i++)
